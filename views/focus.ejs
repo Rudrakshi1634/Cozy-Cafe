@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="/style.css">
+
+<h1>🔥 Focus Mode</h1>
+
+<p>Stay present. Let the oven do its work.</p>
+
+<section>
+
+<h2>Select Session</h2>
+
+<button onclick="setTimer(1500)">25 min</button>
+<button onclick="setTimer(3000)">50 min</button>
+<button onclick="setTimer(300)">5 min test</button>
+
+<br><br>
+
+<label>
+<input type="checkbox" id="strictMode"> Strict Mode 🔒
+</label>
+
+<br><br>
+
+<h1 id="timer">25:00</h1>
+
+<div id="dessert" style="font-size:70px;">
+🥐
+</div>
+
+<div id="status">Ready to start...</div>
+
+<button onclick="startTimer()">Start</button>
+<button onclick="startBreak()">Take Break</button>
+
+<br><br>
+
+<button onclick="toggleMusic()">🎵 Toggle Music</button>
+
+<audio id="music" loop>
+<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+<br><br>
+
+<a href="/">← Back to Cafe</a>
+
+</section>
+
+<script src="/script.js"></script>

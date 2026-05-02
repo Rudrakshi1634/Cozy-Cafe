@@ -1,0 +1,15 @@
+{
+  "users": [
+    {
+      "username": "Ruhi",
+      "tasks": [],
+      "completedTasks": [],
+      "habits": [
+        "Read",
+        "Code",
+        "Exercise"
+      ],
+      "completedHabits": []
+    }
+  ]
+}

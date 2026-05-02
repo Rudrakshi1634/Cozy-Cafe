@@ -1,0 +1,16 @@
+{
+  "name": "hearthlight-cafe",
+  "version": "1.0.0",
+  "description": "A cozy productivity app with Pomodoro baking system",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": ["node", "productivity", "pomodoro"],
+  "author": "Ruhi",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.18.2"
+  }
+}

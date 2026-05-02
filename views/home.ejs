@@ -1,0 +1,112 @@
+<link rel="stylesheet" href="/style.css">
+
+<h1>☕ Cozy Cafe</h1>
+
+<p class="description">
+A peaceful place where focus turns into something warm and meaningful.
+</p>
+
+<div class="quote-box">
+<p id="quote"></p>
+</div>
+
+<section>
+<h2>🧾 Ingredients</h2>
+
+<form action="/add-task" method="POST">
+<input name="task" placeholder="Add ingredient...">
+<button>Add</button>
+</form>
+
+<ul>
+<% tasks.forEach(function(task,index){ %>
+
+<li>
+<%= task %>
+
+<form action="/complete-task" method="POST" style="display:inline">
+<input type="hidden" name="index" value="<%= index %>">
+<button>✔</button>
+</form>
+
+<form action="/delete-task" method="POST" style="display:inline">
+<input type="hidden" name="index" value="<%= index %>">
+<button>❌</button>
+</form>
+
+</li>
+
+<% }) %>
+</ul>
+</section>
+
+<section>
+<h2>✨ Rituals</h2>
+
+<form action="/add-habit" method="POST">
+<input name="habit" placeholder="Add ritual...">
+<button>Add</button>
+</form>
+
+<ul>
+<% habits.forEach(function(habit,index){ %>
+
+<li>
+<%= habit %>
+
+<form action="/complete-habit" method="POST" style="display:inline">
+<input type="hidden" name="index" value="<%= index %>">
+<button>✔</button>
+</form>
+
+<form action="/delete-habit" method="POST" style="display:inline">
+<input type="hidden" name="index" value="<%= index %>">
+<button>❌</button>
+</form>
+
+</li>
+
+<% }) %>
+</ul>
+</section>
+
+<section>
+<h2>🔥 The Oven</h2>
+
+<a href="/focus">
+<button>Enter Focus Mode</button>
+</a>
+
+</section>
+
+<section>
+<h2>📜 Task History</h2>
+
+<ul>
+<% completedTasks.forEach(function(item){ %>
+
+<li>
+✔ <%= item.task %><br>
+<small><%= item.date %></small>
+</li>
+
+<% }) %>
+</ul>
+</section>
+
+<section>
+<h2>✨ Ritual History</h2>
+
+<ul>
+<% completedHabits.forEach(function(item){ %>
+
+<li>
+✔ <%= item.habit %><br>
+<small><%= item.date %></small>
+</li>
+
+<% }) %>
+</ul>
+</section>
+
+<script src="/script.js"></script>
