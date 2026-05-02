@@ -46,10 +46,11 @@ On deployment platforms like Render, data may reset occasionally.
 
 ---
 
-## 🚀 How to Run Locally
+## 🚀 Running Locally (Optional)
 
-1. Clone the repository
+Clone the repo and run:
 
-```bash
-git clone https://github.com/Rudrakshi1634/Cozy-Cafe.git
-cd Cozy-Cafe
+npm install  
+node app.js  
+
+Then open: http://localhost:3000
